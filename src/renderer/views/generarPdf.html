@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar PDF</title>
+    <link rel="stylesheet" href="../css/generarPdf.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generar PDF</h1>
+        <form id="formGenerarPdf">
+            <label for="cuota">Cuota:</label>
+            <select id="cuota" name="cuota" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+
+            <div class="form-group">
+                <label for="anio">Año:</label>
+                <select id="anio" name="anio">
+                    <!-- Opciones generadas dinámicamente con JavaScript -->
+                </select>
+            </div>
+
+            <label for="recurso">Recurso:</label>
+            <select id="recurso" name="recurso" required>
+                <option value="01">ABL</option>
+                <option value="02">Rural</option>
+                <option value="30">Vehiculo</option>
+                <option value="31">Moto</option>
+            </select>
+
+            <button type="button" id="cargarArchivoBtn">Cargar Archivo</button>
+            <p id="rutaArchivoTexto"></p>
+
+           <button type="submit">Enviar</button>
+            
+        </form>
+
+        <button class="back-button" onclick="window.api.send('navegar', 'index')">Atrás</button>
+    </div>
+    <script src="../js/generarPdf.js"></script>
+</body>
+</html>
+
+<!-- 
+// //  **  EJEMPLO!  ***
+// // Enviar datos al backend
+// window.api.send('enviar-datos', { cuota: 1, anio: 2025, recurso: '01' });
+
+// // Escuchar una respuesta del backend
+// window.api.on('respuesta', (mensaje) => {
+//     console.log(mensaje); // Imprime: "Datos recibidos correctamente"
+// }); -->

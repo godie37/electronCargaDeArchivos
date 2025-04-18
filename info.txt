@@ -1,0 +1,20 @@
+mi-app-electron/
+├── src/
+│   ├── main/
+│   │   └── main.js
+│   ├── renderer/
+│   │   ├── assets/
+│   │   ├── css/
+│   │   │   ├── index.css
+│   │   │   └── generarPdf.css
+│   │   ├── js/
+│   │   │   ├── index.js
+│   │   │   └── generarPdf.js
+│   │   └── views/
+│   │       ├── index.html
+│   │       └── generar-pdf.html
+│   └── preload.js
+├── package.json
+├── .gitignore
+└── info.txt
+
